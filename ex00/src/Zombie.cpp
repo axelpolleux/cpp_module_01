@@ -1,5 +1,7 @@
-//
-// Created by apolleux on 10/7/26.
-//
+#include "Zombie.hpp"
+#include <iostream>
 
-#include "../includes/Zombie.hpp"
+void	Zombie::announce(void)
+{
+	std::cout << _name << "BraiiiiiiinnnzzzZ..." << std::endl;
+}
