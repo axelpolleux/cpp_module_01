@@ -1,3 +1,6 @@
-//
-// Created by apolleux on 10/8/26.
-//
+#include "Zombie.hpp"
+#include "../includes/Zombie.hpp"
+
+void			randomChump(std::string name)
+{
+}
