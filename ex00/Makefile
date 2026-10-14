@@ -1,4 +1,4 @@
-NAME = phonebook
+NAME = BraiiiiiiinnnzzzZ
 
 OUTPUT_DIR = build
 

@@ -3,10 +3,10 @@
 
 int	main(void)
 {
-	Zombie zombie;
-	Zombie *test;
-	test = newZombie("Gregouin");
-	test.announce();
-	delete test;
+	Zombie	*res;
+	res = newZombie("Belmondo");
+	res->announce();
+	randomChump("Delon");
+	delete res;
 	return 0;
 }

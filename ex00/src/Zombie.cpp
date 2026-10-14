@@ -1,22 +1,23 @@
 #include "Zombie.hpp"
 #include "../includes/Zombie.hpp"
+
 #include <iostream>
 
-Zombie(void)
+Zombie::Zombie(void)
 {
-	this->_name = "noname";
+	this->_name = "Nothing here";
 }
 
-Zombie(std::string name)
+Zombie::Zombie(std::string name)
 {
 	this->_name = name;
 }
 
-~Zombie()
+Zombie::~Zombie()
 {
 }
 
 void	Zombie::announce(void)
 {
-	std::cout << Zombie._name << ": BraiiiiiiinnnzzzZ...";
+	std::cout << _name << ": BraiiiiiiinnnzzzZ..." << std::endl;
 }
