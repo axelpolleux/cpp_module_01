@@ -6,7 +6,7 @@ SRC_DIR = src
 
 OUT_DIRS := $(OUTPUT_DIR)/$(SRC_DIR)
 
-SRC = main.cpp newZombie.cpp randomChump.cpp Zombie.cpp
+SRC = main.cpp
 
 INCLUDES = includes
 
