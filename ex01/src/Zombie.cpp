@@ -1,12 +1,21 @@
 #include "Zombie.hpp"
-#include <string>
+#include <iostream>
 
-class Zombie()
+Zombie::Zombie(void)
 {
-	private:
-		std::string name;
-	public:
-
+	this->_name = "Nothing here";
 }
 
-Zombie* zombieHorde(int n, std::string name);
+Zombie::Zombie(std::string name)
+{
+	this->_name = name;
+}
+
+Zombie::~Zombie()
+{
+}
+
+void	Zombie::announce(void)
+{
+	std::cout << _name << ": BraiiiiiiinnnzzzZ..." << std::endl;
+}

@@ -1,0 +1,14 @@
+#include "Zombie.hpp"
+#include "../includes/Zombie.hpp"
+
+Zombie* zombieHorde( int N, std::string name )
+{
+	Zombie*	res;
+
+	res = new Zombie[N];
+	for (int i = 0; i < N; i++)
+	{
+		res[i] = Zombie(name);
+	}
+	return res;
+}
