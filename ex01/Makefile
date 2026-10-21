@@ -1,4 +1,4 @@
-NAME = More_braiiiiiiinnnzzzZ
+NAME = Moar_brainz!
 
 OUTPUT_DIR = build
 
