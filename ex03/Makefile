@@ -6,7 +6,7 @@ SRC_DIR = src
 
 OUT_DIRS := $(OUTPUT_DIR)/$(SRC_DIR)
 
-SRC = main.cpp	\
+SRC = main.cpp	HumanA.cpp HumanB.cpp Weapon.cpp
 
 INCLUDES = includes
 

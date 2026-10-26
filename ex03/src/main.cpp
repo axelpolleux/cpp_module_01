@@ -1,17 +1,28 @@
 #include <iostream>
 #include <string>
 
+#include "Weapon.hpp"
+#include "HumanA.hpp"
+#include "HumanB.hpp"
+
 int main()
 {
-	std::string str = "HI THIS IS BRAIN";
-	std::string *stringPTR = &str;
-	std::string &stringREF = str;
+	{
+		Weapon	club = Weapon("crude spiked club");
 
-	std::cout << "The memory address of the string variable: " << &str << std::endl; 
-	std::cout << "The memory address held by stringPTR: " << stringPTR << std::endl;
-	std::cout << "The memory address held by stringREF: " << &stringREF << std::endl;
-	std::cout << "===================" << std::endl;
-	std::cout << "The value of the string variable: " << str << std::endl; 
-	std::cout << "The value pointed to stringPTR: " << *stringPTR << std::endl; 
-	std::cout << "The value pointed to stringREF: " << stringREF << std::endl;
+		HumanA	bob("Bob", club);
+		bob.attack();
+		club.setType("some other type of club");
+		bob.attack();
+	}
+	{
+		Weapon	club = Weapon("crude spiked club");
+
+		HumanB	jim("Jim");
+		jim.setWeapon(club);
+		jim.attack();
+		club.setType("some other type of club");
+		jim.attack();
+	}
+	return 0;
 }
