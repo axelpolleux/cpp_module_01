@@ -3,6 +3,11 @@
 #include "Weapon.hpp"
 #include "../includes/Weapon.hpp"
 
+Weapon::Weapon()
+{
+	_type = "";
+}
+
 Weapon::Weapon(std::string type)
 {
 	_type = type;
