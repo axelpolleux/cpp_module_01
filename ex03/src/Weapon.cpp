@@ -1,7 +1,6 @@
 #include <string>
 
 #include "Weapon.hpp"
-#include "../includes/Weapon.hpp"
 
 Weapon::Weapon()
 {

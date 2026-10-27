@@ -5,10 +5,6 @@
 #include "HumanA.hpp"
 #include "HumanB.hpp"
 
-#include "../includes/HumanA.hpp"
-#include "../includes/HumanB.hpp"
-#include "../includes/Weapon.hpp"
-
 int main(void)
 {
 	{
