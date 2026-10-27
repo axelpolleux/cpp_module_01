@@ -1,4 +1,4 @@
-NAME = unnecessary_violence
+NAME = sed_is_for_losers
 
 OUTPUT_DIR = build
 
@@ -6,7 +6,7 @@ SRC_DIR = src
 
 OUT_DIRS := $(OUTPUT_DIR)/$(SRC_DIR)
 
-SRC = main.cpp	HumanA.cpp HumanB.cpp Weapon.cpp
+SRC = main.cpp
 
 INCLUDES = includes
 

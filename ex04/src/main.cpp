@@ -1,28 +1,20 @@
 #include <iostream>
 #include <string>
+#include <fstream>
 
-#include "Weapon.hpp"
-#include "HumanA.hpp"
-#include "HumanB.hpp"
-
-int main(void)
+int error(std::string message)
 {
-	{
-		Weapon	club = Weapon("crude spiked club");
+	std::cerr << "Error !" << std::endl << message << std::endl;
+	return 1;
+}
 
-		HumanA	bob("Bob", club);
-		bob.attack();
-		club.setType("some other type of club");
-		bob.attack();
-	}
-	{
-		Weapon	club = Weapon("crude spiked club");
-
-		HumanB	jim("Jim");
-		jim.setWeapon(club);
-		jim.attack();
-		club.setType("some other type of club");
-		jim.attack();
-	}
+int main(int ac, char **av)
+{
+	(void)av;
+	if (ac != 4)
+		return error("Stick to the standard: filename str1 str2");
+	std::fstream file(av[1], std::ios::in | std::ios::out);
+	if (!file.is_open())
+		return error("Cannot access your file");
 	return 0;
 }
