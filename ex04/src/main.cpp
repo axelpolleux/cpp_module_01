@@ -34,14 +34,15 @@ int main(int ac, char **av)
 		return error("Follow the standard: filename str1 str2");
 	outfile_name = av[1];
 	outfile_name += ".replace";
-	std::ifstream	Infile(av[1]);
-	std::ofstream	Outfile(outfile_name);
-	if (!Infile.is_open())
+	std::ifstream	infile(av[1]);
+	std::ofstream	outfile(outfile_name.c_str());
+	if (!infile.is_open())
 		return error("Cannot access your file");
-	while ((std::getline(Infile, line)))
-		Outfile << str_replace(line, av[2], av[3]) << std::endl;
+	while ((std::getline(infile, line)))
+		outfile << str_replace(line, av[2], av[3]) << std::endl;
 
 
-	Infile.close();
+	infile.close();
+	outfile.close();
 	return 0;
 }
