@@ -1,13 +1,6 @@
 #include "HumanA.hpp"
 #include <iostream>
 
-HumanA::HumanA()
-{
-
-	_name = "";
-	_weapon = NULL;
-}
-
 HumanA::HumanA(std::string name, Weapon &weapon)
 {
 	_name = name;

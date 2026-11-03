@@ -30,17 +30,18 @@ int main(int ac, char **av)
 	std::string	line;
 	std::string	outfile_name;
 
-	if (ac != 4)
+	if (ac != 4 || !av[2] || !av[3])
 		return error("Follow the standard: filename str1 str2");
+	else if (std::string(av[2]).empty() || std::string(av[3]).empty())
+		return error("Empty strings are invalid");
 	outfile_name = av[1];
 	outfile_name += ".replace";
 	std::ifstream	infile(av[1]);
-	std::ofstream	outfile(outfile_name.c_str());
 	if (!infile.is_open())
 		return error("Cannot access your file");
+	std::ofstream	outfile(outfile_name.c_str());
 	while ((std::getline(infile, line)))
 		outfile << str_replace(line, av[2], av[3]) << std::endl;
-
 
 	infile.close();
 	outfile.close();
